@@ -6,6 +6,6 @@
   become_user: root
   tasks:
     - name: ensure wireshark is at the latest version and update apt repo
-      apt:
+      yum:
         name: wireshark
         state: latest
