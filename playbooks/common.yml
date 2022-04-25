@@ -1,11 +1,9 @@
 ---
-- name: update web, nfs and db servers
-  hosts: nfs, db, lb
-  remote_user: ubuntu
-  become: yes
-  become_user: root
+- hosts: all
   tasks:
-    - name: ensure wireshark is at the latest version
-      apt:
-        name: wireshark
-        state: latest
+    - name: ensure nginx is at the latest version
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
