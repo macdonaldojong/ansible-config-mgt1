@@ -1,11 +1,11 @@
 ---
 - name: update web, nfs and db servers
-  hosts: webservers, nfs, db, lb
+  hosts: nfs, db, lb
   remote_user: ubuntu
   become: yes
   become_user: root
   tasks:
-    - name: ensure wireshark is at the latest version and update apt repo
+    - name: ensure wireshark is at the latest version
       yum:
         name: wireshark
         state: latest
