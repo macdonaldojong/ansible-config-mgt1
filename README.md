@@ -1,2 +1,2 @@
 # ansible-config
-Test jenkins build trigger
+New Test of jenkins build trigger
