@@ -13,7 +13,7 @@
     - name: create a directory
       file:
         path: /home/sample
-        state: touch
+        state: directory
 
     - name: create a file
       file:
@@ -42,7 +42,7 @@
     - name: create a directory
       file:
         path: /home/sample
-        state: touch
+        state: directory
   
     - name: create a file
       file:
