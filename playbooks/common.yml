@@ -10,9 +10,9 @@
         name: wireshark
         state: latest
 
-    - name: create folder ansible.text
+    - name: create folder ansible.txt
       yum:
-        path: /home/sample/ansible.text
+        path: /home/sample/ansible.txt
         state: touch
 
     - name:  set timezone
@@ -29,9 +29,9 @@
       apt: 
         update_cache: yes
 
-    - name: create folder ansible.text
+    - name: create folder ansible.txt
       apt:
-        path: /home/sample/ansible.text
+        path: /home/sample/ansible.txt
         state: touch
 
     - name: ensure wireshark is at the latest version
