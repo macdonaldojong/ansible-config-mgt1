@@ -1,5 +1,4 @@
-# Project-11: 
-* Ansible configuration management plus jenkins to automate deployment on targeted host/servers
+# Project-11:  Ansible configuration management plus jenkins to automate deployment on targeted host/servers
 
 ### ANSIBLE CONFIGURATION MANAGEMENT – AUTOMATE PROJECT (7 TO 10)
 * Task
