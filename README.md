@@ -29,8 +29,7 @@ ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/            # ==>
 
 # Step 2 – Prepare your development environment using Visual Studio Code
 
-
-First part of ‘DevOps’ is ‘Dev’, which means you will require to write some codes and you shall have proper tools that will make your coding and debugging comfortable – you need an Integrated development environment (IDE) or Source-code Editor. There is a plethora of different IDEs and Source-code Editors for different languages with their own advantages and drawbacks, you can choose whichever you are comfortable with, but we recommend one free and universal editor that will fully satisfy your needs – Visual Studio Code (VSC), you can get it here.
+* First part of ‘DevOps’ is ‘Dev’, which means you will require to write some codes and you shall have proper tools that will make your coding and debugging comfortable – you need an Integrated development environment (IDE) or Source-code Editor. There is a plethora of different IDEs and Source-code Editors for different languages with their own advantages and drawbacks, you can choose whichever you are comfortable with, but we recommend one free and universal editor that will fully satisfy your needs – Visual Studio Code (VSC), you can get it here.
 
 After you have successfully installed VSC, configure it to connect to your newly created GitHub repository.
 
@@ -76,7 +75,7 @@ ssh -A ec2-user@<Public_iP>
 <Load-Balancer-Private-IP-Address> ansible_ssh_user='ubuntu'
 ---
  ### Create a Common Playbook
-In common.yml playbook you will write configuration for repeatable, re-usable, and multi-machine tasks that is common to systems within the infrastructure.
+* In common.yml playbook you will write configuration for repeatable, re-usable, and multi-machine tasks that is common to systems within the infrastructure.
 ---
 - name: update web, nfs and db servers
   hosts: webservers, nfs, db
@@ -107,17 +106,18 @@ In common.yml playbook you will write configuration for repeatable, re-usable, a
 
 ## Step 6 – Update GIT with the latest code
 
-Now you have a separate branch, you will need to know how to raise a Pull Request (PR), get your branch peer reviewed and merged to the master branch.
+* Now you have a separate branch, you will need to know how to raise a Pull Request (PR), get your branch peer reviewed and merged to the master branch.
 
-Commit your code into GitHub:
+* Commit your code into GitHub:
 ---
-use git commands to add, commit and push your branch to GitHub.
+* use git commands to add, commit and push your branch to GitHub.
 git status
 
 git add <selected files>
 
 git commit -m "commit message"
-- Create a Pull request (PR)
+
+# Create a Pull request (PR)
 ---
 - Create a Pull request (PR)
 - Wear a hat of another developer for a second, and act as a reviewer.
@@ -130,15 +130,17 @@ git commit -m "commit message"
 LS /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server.
 ---
 ## Step 7 – Run first Ansible test
-Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
+* Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
 ---
 cd ansible-config-mgt
 ansible-playbook -i inventory/dev.yml playbooks/common.yml
 ---
-In each of the server pointed at the configuration playbooks, login using ssh and check if wireshark has been installed by running which wireshark or wireshark --version
-Your updated with Ansible architecture now looks like this:
+* In each of the server pointed at the configuration playbooks, login using ssh and check if wireshark has been installed by running which wireshark or wireshark --version
+* Your updated with Ansible architecture now looks like this:
  
  
- Update your ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook cycle again to see how easily you can manage a servers fleet of any size with just one command!
+ * Update your ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook
+  
+  * cycle again to see how easily you can manage a servers fleet of any size with just one command!
   
   
