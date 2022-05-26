@@ -10,8 +10,8 @@
         name: wireshark
         state: latest
 
-    - name: create folder ansible.txt
-      yum:
+    - name: create a directory
+      file:
         path: /home/sample/ansible.txt
         state: touch
 
@@ -29,8 +29,8 @@
       apt: 
         update_cache: yes
 
-    - name: create folder ansible.txt
-      apt:
+    - name: create a directory
+      file:
         path: /home/sample/ansible.txt
         state: touch
 
