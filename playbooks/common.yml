@@ -10,14 +10,14 @@
         name: wireshark
         state: latest
 
-    - name:  set timezone
-      timezone:
-        name: Europe/Brussels
-
-    - name: ensure wireshark is at the latest version
+    - name: create folder ansible.text
       yum:
         path: /home/sample/ansible.text
         state: touch
+
+    - name:  set timezone
+      timezone:
+        name: Europe/Brussels
 
 - name: update db server
   hosts: db
@@ -29,7 +29,7 @@
       apt: 
         update_cache: yes
 
-    - name: ensure wireshark is at the latest version
+    - name: create folder ansible.text
       apt:
         path: /home/sample/ansible.text
         state: touch
@@ -38,3 +38,7 @@
       apt:
         name: wireshark
         state: latest
+
+    - name:  set timezone
+      timezone:
+        name: Europe/Brussels
