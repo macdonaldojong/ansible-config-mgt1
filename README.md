@@ -1,4 +1,5 @@
-# Project-11: Using Ansible configuration management and jenkins to automate deployment to target host/servers
+# Project-11: 
+Ansible configuration management plus jenkins to automate deployment on targeted host/servers
 ANSIBLE CONFIGURATION MANAGEMENT – AUTOMATE PROJECT (7 TO 10)
 # Task
 Install and configure Ansible client to act as a Jump Server/Bastion Host
