@@ -1,14 +1,15 @@
 # Project-11: 
-Ansible configuration management plus jenkins to automate deployment on targeted host/servers
+* Ansible configuration management plus jenkins to automate deployment on targeted host/servers
 
 ### ANSIBLE CONFIGURATION MANAGEMENT – AUTOMATE PROJECT (7 TO 10)
-## Task
-Install and configure Ansible client to act as a Jump Server/Bastion Host
-Create a simple Ansible playbook to automate servers configuration
+* Task
+* Install and configure Ansible client to act as a Jump Server/Bastion Host
+* Create a simple Ansible playbook to automate servers configuration
 
 ## INSTALL AND CONFIGURE ANSIBLE ON EC2 INSTANCE
-Update Name tag on your Jenkins EC2 Instance to Jenkins-Ansible. We will use this server to run playbooks.
-In your GitHub account create a new repository and name it ansible-config-mgt.
+
+* Update Name tag on your Jenkins EC2 Instance to Jenkins-Ansible. We will use this server to run playbooks.
+* In your GitHub account create a new repository and name it ansible-config-mgt.
 Instal Ansible
 ---
 sudo apt update
@@ -38,16 +39,16 @@ After you have successfully installed VSC, configure it to connect to your newly
 git clone <ansible-config-mgt repo link>
 ---
 # BEGIN ANSIBLE DEVELOPMENT
-- In your ansible-config-mgt GitHub repository, create a new branch that will be used for development of a new feature. ( new branch creation= PRJ-145)
-- Checkout the newly created feature branch to your local machine and start building your code and directory structure
-- Create a directory and name it playbooks – it will be used to store all your playbook files.
-- Create a directory and name it inventory – it will be used to keep your hosts organised.
-- Within the playbooks folder, create your first playbook, and name it common.yml
-- Within the inventory folder, create an inventory file (.yml) for each environment (Development, Staging Testing and Production) dev, staging, uat, and prod respectively.
+* In your ansible-config-mgt GitHub repository, create a new branch that will be used for development of a new feature. ( new branch creation= PRJ-145)
+* Checkout the newly created feature branch to your local machine and start building your code and directory structure
+* Create a directory and name it playbooks – it will be used to store all your playbook files.
+* Create a directory and name it inventory – it will be used to keep your hosts organised.
+* Within the playbooks folder, create your first playbook, and name it common.yml
+* Within the inventory folder, create an inventory file (.yml) for each environment (Development, Staging Testing and Production) dev, staging, uat, and prod respectively.
 
 ## Step 4 – Set up an Ansible Inventory
   
-Make sure to setup SSH agent and connect VS Code to your Jenkins-Ansible instance:
+* Make sure to setup SSH agent and connect VS Code to your Jenkins-Ansible instance:
 ---
 eval `ssh-agent -s`
 ssh-add <path-to-private-key>
