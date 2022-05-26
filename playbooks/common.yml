@@ -10,6 +10,15 @@
         name: wireshark
         state: latest
 
+    - name:  set timezone
+      timezone:
+        name: Europe/Brussels
+
+    - name: ensure wireshark is at the latest version
+      yum:
+        path: /home/sample/ansible.text
+        state: touch
+
 - name: update db server
   hosts: db
   remote_user: ubuntu
@@ -19,6 +28,11 @@
     - name: Update apt repo
       apt: 
         update_cache: yes
+
+    - name: ensure wireshark is at the latest version
+      apt:
+        path: /home/sample/ansible.text
+        state: touch
 
     - name: ensure wireshark is at the latest version
       apt:
